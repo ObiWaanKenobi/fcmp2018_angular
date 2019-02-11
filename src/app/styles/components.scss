@@ -1,0 +1,16 @@
+.app-button {
+    width: $element-width-sm;
+    height: $element-height-md;
+    border: 0;
+    border-radius: $border-radius;
+    color: $color-white;
+}
+
+.app-input {
+    border-radius:$border-radius;
+    border: 1px solid $color-blue;
+    width: $element-width-lg;
+    height: $element-height-sm;
+    padding-left: $element-padding;
+    color: $color-blue;
+}

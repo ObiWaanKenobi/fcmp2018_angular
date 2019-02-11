@@ -1,0 +1,44 @@
+@import '../../styles/main.scss';
+
+.header {
+    width: 1200px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    // top: 0;
+
+    &__button {
+        background-color: $color-green;
+        margin: auto 20px auto auto;
+        &:hover {
+            background-color: $color-dark-green;
+        }
+    }
+
+    &__section {
+        height: 50px;
+        line-height: 50px;
+        background-color: azure;
+    }
+
+    &__section:not(:last-of-type) {
+        border-bottom: 1px solid gray;
+    }
+
+    .title {
+        padding-left: 20px;
+    }
+
+    .source {
+       text-align: center;
+       color: $color-white;
+       background-color: $color-light-blue;
+    }
+
+    .header-buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

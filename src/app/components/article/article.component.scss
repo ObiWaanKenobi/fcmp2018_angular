@@ -1,0 +1,51 @@
+@import '../../styles/main.scss';
+
+.article {
+    width: 700px;
+    height: 250px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: flex;
+
+    .image {
+        flex-basis: 175px;
+        max-width: 100%;
+        max-height: 150px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .content {
+        flex-basis: 375px;
+        margin-left: 10px;
+        div {
+            max-height: 170px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .article-buttons {
+        flex-basis: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 25px;
+        padding-right: 10px;
+        .edit-button {
+            background-color: $color-blue;
+            margin-bottom: 10px;
+            &:hover {
+                background-color: $color-light-blue
+            }
+        }
+
+        .delete-button {
+            background-color: $color-red;
+            &:hover {
+                background-color: $color-light-red;
+            }
+        }
+    }
+}
