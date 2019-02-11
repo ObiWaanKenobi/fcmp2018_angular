@@ -6,8 +6,9 @@
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    // position: absolute;
-    // top: 0;
+    position: fixed;
+    top: 0;
+    left: 20%;
 
     &__button {
         background-color: $color-green;
@@ -35,10 +36,18 @@
        text-align: center;
        color: $color-white;
        background-color: $color-light-blue;
+       font-size: 20px;
     }
 
     .header-buttons {
         display: flex;
         justify-content: flex-end;
+
+        &__select {
+            width: 150px;
+            height: 35px;
+            border-radius: 3px;
+            margin: auto auto auto 20px;
+        }
     }
 }

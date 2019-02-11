@@ -1,7 +1,10 @@
 <header class="header">
   <div class="header__section title">News List</div>
-  <div class="header__section source">Source</div>
+  <div class="header__section source">{{currentSource}}</div>
   <div class="header__section header-buttons">
+    <select [(ngModel)]="currentSource" class="header-buttons__select">
+      <option *ngFor="let s of sources" [ngValue]="s"> {{s}} </option>
+    </select>
     <button class="app-button header__button">Add Article</button>
   </div>
 </header>

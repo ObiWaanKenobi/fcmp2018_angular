@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SourceService } from '../../services/source.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  private currentSource: string;
+  private sources: string[];
+
+  constructor(
+    private sourceService: SourceService
+  ) { }
 
   ngOnInit() {
+    this.sources = this.sourceService.getSources();
   }
 
 }
