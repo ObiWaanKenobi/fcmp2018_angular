@@ -1,0 +1,41 @@
+@import '../../styles/main.scss';
+
+.article-edit {
+    margin-top: 150px;
+    height: 450px;
+    width: 670px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column wrap;
+
+    &__label {
+        display: block;
+    }
+
+    &__field {
+        margin-bottom: 15px;
+        margin-left: 20px;
+        margin-top: 20px;
+        .content-input {
+            height: 200px;
+        }
+
+        .save-button {
+            margin-right: 50px;
+            background-color: $color-green;
+            &:hover {
+                background-color: $color-dark-green;
+            }
+
+        }
+
+        .cancel-button {
+            background-color: $color-red;
+            &:hover {
+                background-color: $color-light-red;
+            }
+        }
+
+    }
+}

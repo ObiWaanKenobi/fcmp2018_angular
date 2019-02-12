@@ -10,6 +10,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { EditArticlePageComponent } from './pages/edit-article-page/edit-article-page.component';
 import { ArticleComponent } from './components/article/article.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
+import { ArticleEditComponent } from './components/article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ArticleListComponent } from './components/article-list/article-list.com
     MainPageComponent,
     EditArticlePageComponent,
     ArticleComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    ArticleEditComponent
   ],
   imports: [
     BrowserModule,

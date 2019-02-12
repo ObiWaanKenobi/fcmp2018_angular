@@ -2,8 +2,9 @@
 
 .header {
     width: 1200px;
-    border: 1px solid gray;
-    border-radius: 6px;
+    border: 1px solid $color-light-blue;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -42,6 +43,7 @@
     .header-buttons {
         display: flex;
         justify-content: flex-end;
+        border-radius: 6px;
 
         &__select {
             width: 150px;
