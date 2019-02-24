@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="header__section title"><h2>News List</h2></div>
+  <div class="header__section source">{{currentRoute === '/edit-article' 
+    ? 'Edit' 
+    : currentRoute === '/add-article' ? 'Add' : currentSource}}</div>
+  <div class="header__section header-controls" *ngIf="currentRoute === '/main'">
+    <select 
+      [(ngModel)]="currentSource"
+      class="header-controls__select" 
+      (change)="onSourceChange($event.target.value)"
+      [disabled]="isCustomArticles"
+    >
+      <option *ngFor="let s of sources" [ngValue]="s.name"> {{s.name}} </option>
+    </select>
+    <input 
+      (change)="onFilterChange($event.target.value)"
+      class="app-input header-controls__input"
+      placeholder="filter"
+    >
+    <div class="header-controls__checkbox">
+        <input 
+          #checkBox
+          type="checkbox"
+          id="mine-articles-checkbox"
+          (change)="showCustomArticles(checkBox.checked)"
+          [checked]="isCustomArticles"
+          >
+        <label for="mine-articles-checkbox">Only created by me</label>
+    </div>
+    <button class="app-button header-controls__button" (click)="onAddNew()">
+      Add Article
+    </button>
+  </div>
+</header>

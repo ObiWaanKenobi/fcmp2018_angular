@@ -1,0 +1,67 @@
+@import '../../styles/main.scss';
+
+.header {
+    width: 1200px;
+    border: 1px solid $color-light-blue;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 20%;
+
+    &__section {
+        height: 50px;
+        line-height: 50px;
+        background-color: azure;
+    }
+
+    &__section:not(:last-of-type) {
+        border-bottom: 1px solid gray;
+    }
+
+    .title {
+        padding-left: 20px;
+        line-height: 0;
+    }
+
+    .source {
+       text-align: center;
+       color: $color-white;
+       background-color: $color-light-blue;
+       font-size: 20px;
+    }
+
+    .header-controls {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 6px;
+
+        &__select {
+            width: 150px;
+            height: 35px;
+            border-radius: 3px;
+            margin: auto 20px;
+        }
+
+        &__input {
+            height: 35px;
+            width: 200px;
+            margin: auto 150px auto 0;
+            box-sizing: border-box;
+        }
+
+        &__checkbox {
+            margin: auto 150px auto 0;
+        }
+
+        &__button {
+            background-color: $color-green;
+            margin: auto 20px;
+            &:hover {
+                background-color: $color-dark-green;
+            }
+        }
+    }
+}

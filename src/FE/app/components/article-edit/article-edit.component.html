@@ -1,0 +1,60 @@
+<form class="article-edit" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+  <div class="article-edit__field">
+    <label for="title" class="article-edit__label">Title</label>
+    <input class="app-input article-edit__input"
+          type="text"
+          id="title"
+          formControlName="title">
+  </div>
+  <div class="article-edit__field">
+    <label for="description" class="article-edit__label">Short description</label>
+    <input class="app-input article-edit__input"
+          type="text"
+          id="description"
+          formControlName="description">
+  </div>
+  <div class="article-edit__field">
+    <label for="content" class="article-edit__label">Content</label>
+    <textarea class="app-input article-edit__input content-input"
+          type="text"
+          id="content"
+          formControlName="content">
+    </textarea>
+  </div>
+  <div class="article-edit__field">
+    <label for="image" class="article-edit__label">Image</label>
+    <input class="app-input article-edit__input"
+          type="url"
+          id="image"
+          formControlName="urlToImage"
+          placeholder="https://example.com"
+          pattern="https://.*">
+  </div>
+  <div class="article-edit__field">
+    <label for="publishedAt" class="article-edit__label">Date</label>
+    <input class="app-input article-edit__input"
+          type="date"
+          id="publishedAt"
+          formControlName="publishedAt">
+  </div>
+  <div class="article-edit__field">
+    <label for="author" class="article-edit__label">Author</label>
+    <input class="app-input article-edit__input"
+          type="text"
+          id="author"
+          formControlName="author">
+  </div>
+  <div class="article-edit__field">
+    <label for="source" type="url" class="article-edit__label">Source URL</label>
+    <input class="app-input article-edit__input"
+          type="url"
+          id="source"
+          formControlName="source"
+          placeholder="https://example.com"
+          pattern="https://.*">
+  </div>
+  <div class="article-edit__field">
+    <button type="submit" class="app-button save-button">Save</button>
+    <button type="reset" (click)="onCancel()" class="app-button cancel-button">Cancel</button>
+  </div>
+</form>

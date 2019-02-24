@@ -1,0 +1,13 @@
+<div class="article">
+  <img class="article__section image" [src]="article.urlToImage">
+  <main class="article__section content">
+    <h2><a [href]="article.url" target="_blank">{{article.title}}</a></h2>
+    <h4>{{article.publishedAt | date}}</h4>
+    <div>{{article.description}}</div>
+  </main>
+  <div *ngIf="article.isCustom" class="article__section article-buttons">
+    <button class="app-button edit-button" (click)="onArticleEdit()">Edit</button>
+    <button class="app-button delete-button" (click)="onDelete()">Delete</button>
+  </div>
+</div>
+
